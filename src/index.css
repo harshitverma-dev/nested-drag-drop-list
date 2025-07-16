@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.list-table-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners for the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between borders */
+}
+
+thead {
+  background-color: #f9f9f9;
+}
+
+th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th.wbs-header {
+  width: 15%;
+}
+
+th.activity-header {
+  width: 75%;
+}
+
+th.icon-header {
+  width: 10%;
+  text-align: center;
+}
+
+.list-item {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  cursor: grab;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.list-item[style*="opacity: 0.4"] {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #f0f0f0;
+}
+
+.list-item[style*="background-color: rgb(230, 247, 255)"] {
+  background-color: #e6f7ff !important; 
+}
+
+td {
+  padding: 12px 20px;
+  vertical-align: middle;
+  color: #34495e;
+}
+
+.wbs-column {
+  font-weight: 500;
+  color: #555;
+}
+
+.activity-column {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-label {
+  font-size: 1.05em;
+}
+
+.top-level-item .wbs-column .wbs-text,
+.top-level-item .activity-column .item-label {
+  font-weight: 600;
+}
+
+.expand-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #666;
+}
+
+.icon-column {
+  text-align: center;
+}
+
+.message-icon {
+  color: #666;
+  cursor: pointer;
+}
+
+.list-item .activity-column {
+  padding-left: var(--indent-level, 0px);
+}
+
+.list-item[data-level="1"] .activity-column {
+  padding-left: 0px;
+}
+.list-item[data-level="2"] .activity-column {
+  padding-left: 30px;
+}
+.list-item[data-level="3"] .activity-column {
+  padding-left: 60px;
+}
+.list-item[data-level="4"] .activity-column {
+  padding-left: 90px;
+}
+
+.json-output {
+  margin-top: 40px;
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+}
+
+.json-output h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.json-output pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.85em;
+  color: #555;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
