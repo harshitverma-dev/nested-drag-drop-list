@@ -15,8 +15,8 @@ A React, TypeScript, and Tailwind CSS project that implements a nested drag and 
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd <repository-name>
+    git clone https://github.com/harshitverma-dev/nested-drag-drop-list.git
+    cd nested-drag-drop-list
     ```
 
 2.  **Install dependencies:**
