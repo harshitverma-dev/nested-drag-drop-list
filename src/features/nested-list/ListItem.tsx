@@ -1,5 +1,3 @@
-"use client"
-
 import type React from "react"
 import { useRef } from "react"
 import { useDrag, useDrop, type DropTargetMonitor } from "react-dnd"

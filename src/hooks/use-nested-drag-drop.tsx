@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useCallback } from "react"
 import { initialItems } from "../data/inital-items"
 import { findItemAndParent, removeItem, isDescendant } from "../utils/item-helpers"
